@@ -57,38 +57,31 @@ const animalsContent = [
 ]
 
 
-function addAnimalsTable (animalsContent) {
-
+function addAnimalsTable(animalsContent) {
   animalsContent.forEach(animal => 
     mapObjectToCell(animal)
   );
 
 }
 
-function mapObjectToCell (animal) {
-
+function mapObjectToCell(animal) {
   const newRow = tableBody.insertRow();
 
   Object.values(animal).forEach(item => {
-
     const newColumn = document.createElement('td');
     newRow.appendChild(newColumn);
     newColumn.textContent = item;
-
   });
 
 }
 
-function addTitlesTable (titles) {
-
+function addTitlesTable(titles) {
   const headerRow = header.insertRow();
 
   titles.forEach(function(title){
-
     const headerCell = document.createElement('th');
     headerRow.appendChild(headerCell);
     headerCell.textContent = title;
-
   });
 }
 
